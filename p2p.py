@@ -12,7 +12,7 @@ from tools.constants import *
 """
 class p2p:
     # make ourself the default peer
-    peers = ['127.0.0.1']
+    peers = ['192.168.0.152']
 
 
 def main():
@@ -27,6 +27,7 @@ def main():
             # sleep a random time between 1 -5 seconds
             time.sleep(randint(RAND_TIME_START,RAND_TIME_END))
             for peer in p2p.peers:
+                print(peer)
                 try:
                     print("OYO1")
                     client = Client(peer)
