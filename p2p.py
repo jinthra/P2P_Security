@@ -29,7 +29,6 @@ def main():
             for peer in p2p.peers:
                 print(peer)
                 try:
-                    print("OYO1")
                     client = Client(peer)
                     print("OYO")
                 except KeyboardInterrupt:
@@ -51,3 +50,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+    #msg = fileManager.convert_to_bytes()
+    #c = Client('192.168.0.152')
+    #s = Server(msg)
