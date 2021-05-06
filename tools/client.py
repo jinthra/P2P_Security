@@ -62,7 +62,6 @@ class Client:
            if self.previous_data != data:
                fileManager.create_file(data)
                self.previous_data = data
-           # TODO download the file to the computer
             
            return data
        except KeyboardInterrupt:

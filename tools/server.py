@@ -6,6 +6,7 @@ from tools.fileManager import *
 
 
 
+
 class Server: 
 
 
@@ -62,7 +63,6 @@ class Server:
                         # if the connection is still active we send it back the data
                         # this part deals with uploading of the file
                         connection.send(self.msg)
-                        #convert_to_music(self.msg)
         except Exception as e:
             sys.exit()
 

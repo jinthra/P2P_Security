@@ -1,4 +1,5 @@
 import time
+import sys
 from random import randint
 from tools import fileManager
 from tools.client import Client
@@ -12,7 +13,7 @@ from tools.constants import *
 """
 class p2p:
     # make ourself the default peer
-    peers = ['192.168.0.152']
+    peers = ['157.26.66.X']
 
 
 def main():
@@ -27,10 +28,8 @@ def main():
             # sleep a random time between 1 -5 seconds
             time.sleep(randint(RAND_TIME_START,RAND_TIME_END))
             for peer in p2p.peers:
-                print(peer)
                 try:
                     client = Client(peer)
-                    print("OYO")
                 except KeyboardInterrupt:
                     sys.exit(0)
                 except:
@@ -50,6 +49,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    #msg = fileManager.convert_to_bytes()
-    #c = Client('192.168.0.152')
-    #s = Server(msg)
